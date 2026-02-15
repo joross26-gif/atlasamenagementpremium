@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg: 222 47% 7%;
+  --card: 222 44% 10%;
+  --text: 210 40% 96%;
+  --muted: 215 18% 72%;
+  --gold: 42 92% 55%;
+  --gold2: 38 84% 45%;
+  --line: 42 92% 55%;
+  --success: 158 68% 45%;
+}
+
+html, body { height: 100%; }
+
+body{
+  background: radial-gradient(900px 500px at 20% 10%, hsl(42 92% 55% / 0.08), transparent 60%),
+              radial-gradient(700px 500px at 90% 20%, hsl(38 84% 45% / 0.07), transparent 60%),
+              linear-gradient(180deg, hsl(var(--bg)), hsl(222 47% 5%));
+  color: hsl(var(--text));
+}
+
+::selection{ background: hsl(var(--gold) / 0.25); }
+
+@layer components{
+  .container-max{ @apply mx-auto w-full max-w-6xl px-4; }
+  .card{ @apply rounded-2xl border border-[hsl(var(--line)/0.18)] bg-[hsl(var(--card)/0.82)] shadow-glow backdrop-blur; }
+  .btn{ @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition; }
+  .btn-primary{ @apply btn bg-gradient-to-b from-[hsl(var(--gold))] to-[hsl(var(--gold2))] text-black hover:brightness-110; }
+  .btn-ghost{ @apply btn border border-[hsl(var(--line)/0.24)] bg-transparent text-[hsl(var(--text))] hover:bg-white/5; }
+  .pill{ @apply inline-flex items-center rounded-full border border-[hsl(var(--line)/0.22)] bg-white/5 px-3 py-1 text-xs text-[hsl(var(--muted))]; }
+  .h1{ @apply text-4xl font-extrabold tracking-tight md:text-5xl; }
+  .h2{ @apply text-2xl font-bold tracking-tight md:text-3xl; }
+  .sub{ @apply text-base leading-relaxed text-[hsl(var(--muted))] md:text-lg; }
+  .line{ @apply h-px w-full bg-[linear-gradient(90deg,transparent,hsl(var(--line)/0.35),transparent)]; }
+}
