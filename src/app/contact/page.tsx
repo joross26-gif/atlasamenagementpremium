@@ -19,7 +19,6 @@ export default function ContactPage() {
       const res = await fetch(endpoint, { method: "POST", body: data, headers: { Accept: "application/json" } });
       if (res.ok) { form.reset(); setStatus("ok"); } else { setStatus("err"); }
     } catch { setStatus("err"); }
-  }
 
   return (
     <main style={{ backgroundImage: "url(/backgrounds/contact-bg.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}>
