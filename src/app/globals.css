@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+body { @apply bg-[#070B12] text-slate-100; }
+
+.gold-border { box-shadow: 0 0 0 1px rgba(245,158,11,.35) inset; }
