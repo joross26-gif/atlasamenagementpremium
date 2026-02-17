@@ -16,7 +16,7 @@ export default function ForfaitPage() {
           </div>
           <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
             <div className="text-lg font-semibold">Documents</div>
-            <p className="mt-2 text-sm text-slate-300">Télécharge les PDFs (à remplacer dans <span className="font-mono">/public/assets</span>).</p>
+            <p className="mt-2 text-sm text-slate-300"></p>
             <div className="mt-4 flex flex-wrap gap-3">
               <a className="rounded-full bg-gold-500 px-5 py-2.5 text-sm font-semibold text-black hover:bg-gold-400" href="/assets/offre-2026.pdf" target="_blank" rel="noreferrer">Offre 2026 (PDF)</a>
               <a className="rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm hover:bg-white/10" href="/assets/contrat-annuel-formulaire.pdf" target="_blank" rel="noreferrer">Contrat annuel (PDF)</a>

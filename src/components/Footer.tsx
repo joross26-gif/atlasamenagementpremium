@@ -34,7 +34,7 @@ export default function Footer() {
             <li><a className="hover:underline" href="/assets/offre-2026.pdf" target="_blank" rel="noreferrer">Offre 2026 (PDF)</a></li>
             <li><a className="hover:underline" href="/assets/contrat-annuel-formulaire.pdf" target="_blank" rel="noreferrer">Contrat annuel (PDF)</a></li>
           </ul>
-          <div className="mt-4 text-xs text-slate-500">Remplace les PDFs dans <span className="font-mono">/public/assets</span>.</div>
+          <div className="mt-4 text-xs text-slate-500"><span className="font-mono"></span>.</div>
         </div>
       </div>
 

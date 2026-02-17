@@ -32,11 +32,6 @@ export default function ContactPage() {
               <div className="mt-2">Email: <a className="hover:underline" href={`mailto:${SITE.email}`}>{SITE.email}</a></div>
               <div className="mt-2">Secteur: {SITE.area}</div>
             </div>
-            <div className="mt-6 rounded-xl border border-gold-500/30 bg-white/5 p-4 text-xs text-slate-300">
-              <div className="font-semibold text-slate-100">Important</div>
-              <div className="mt-1">Pour activer le formulaire: copie <span className="font-mono">.env.example</span> vers <span className="font-mono">.env.local</span> et mets ton endpoint Formspree.</div>
-            </div>
-          </div>
 
           <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
             <div className="text-lg font-semibold">Formulaire</div>

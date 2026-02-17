@@ -27,7 +27,7 @@ export default function PrixPage() {
             </tbody>
           </table>
         </div>
-        <p className="mt-4 text-xs text-slate-500">* Remplace ce tableau par tes prix exacts quand tu veux.</p>
+        <p className="mt-4 text-xs text-slate-500"></p>
       </Section>
     </main>
   );
