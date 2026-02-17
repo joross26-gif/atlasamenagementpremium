@@ -20,39 +20,65 @@ export default function ContactPage() {
       if (res.ok) { form.reset(); setStatus("ok"); } else { setStatus("err"); }
     } catch { setStatus("err"); }
 
-  return (
-    <main style={{ backgroundImage: "url(/backgrounds/contact-bg.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}>
-      <Section title="Contact" subtitle="Soumission rapide — réponse rapide.">
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
-            <div className="text-lg font-semibold">Coordonnées</div>
-            <div className="mt-3 text-sm text-slate-300">
-              <div>Téléphone: <a className="hover:underline" href={`tel:${SITE.phone.replace(/[^0-9+]/g, "")}`}>{SITE.phone}</a></div>
-              <div className="mt-2">Email: <a className="hover:underline" href={`mailto:${SITE.email}`}>{SITE.email}</a></div>
-              <div className="mt-2">Secteur: {SITE.area}</div>
+return (
+  <main
+    style={{
+      backgroundImage: "url(/backgrounds/contact-bg.jpg)",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
+    <Section title="Contact" subtitle="Soumission rapide – réponse rapide.">
+      
+      <div className="grid gap-6 md:grid-cols-2">
+
+        {/* COORDONNÉES */}
+        <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+          <div className="text-lg font-semibold">Coordonnées</div>
+
+          <div className="mt-3 text-sm text-slate-300">
+            <div>
+              Téléphone :{" "}
+              <a
+                className="underline"
+                href={`tel:${SITE.phone.replace(/[^0-9]/g, "")}`}
+              >
+                {SITE.phone}
+              </a>
             </div>
 
-          <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
-            <div className="text-lg font-semibold">Formulaire</div>
-            {!ready && (
-              <div className="mt-3 rounded-xl border border-red-500/30 bg-red-500/10 p-3 text-sm text-red-200">
-                Variable manquante: <span className="font-mono">{SITE.formspreeEnvKey}</span>. Mets-la dans <span className="font-mono">.env.local</span> (ou Vercel → Settings → Environment Variables).
-              </div>
-            )}
-            <form onSubmit={onSubmit} className="mt-4 space-y-3">
-              <input name="name" required placeholder="Nom" className="w-full rounded-xl border border-white/10 bg-[#070B12]/70 px-4 py-3 text-sm outline-none focus:border-gold-500/60" />
-              <input name="phone" placeholder="Téléphone" className="w-full rounded-xl border border-white/10 bg-[#070B12]/70 px-4 py-3 text-sm outline-none focus:border-gold-500/60" />
-              <input name="email" type="email" required placeholder="Email" className="w-full rounded-xl border border-white/10 bg-[#070B12]/70 px-4 py-3 text-sm outline-none focus:border-gold-500/60" />
-              <textarea name="message" required placeholder="Décris ton projet + adresse + photos si possible" rows={5} className="w-full rounded-xl border border-white/10 bg-[#070B12]/70 px-4 py-3 text-sm outline-none focus:border-gold-500/60" />
-              <button disabled={!ready || status === "sending"} className="w-full rounded-xl bg-gold-500 px-5 py-3 text-sm font-semibold text-black disabled:opacity-50">
-                {status === "sending" ? "Envoi..." : "Envoyer"}
-              </button>
-              {status === "ok" && <div className="text-sm text-emerald-300">Message envoyé ✅</div>}
-              {status === "err" && <div className="text-sm text-red-300">Erreur. Réessaie ou écris-nous par email.</div>}
-            </form>
+            <div className="mt-2">
+              Email :{" "}
+              <a className="underline" href={`mailto:${SITE.email}`}>
+                {SITE.email}
+              </a>
+            </div>
+
+            <div className="mt-2">
+              Secteur : {SITE.area}
+            </div>
           </div>
         </div>
-      </Section>
-    </main>
-  );
-}
+
+        {/* FORMULAIRE */}
+        <div className="rounded-2xl border border-white/10 bg-black/30 p-6">
+          <div className="text-lg font-semibold">Formulaire</div>
+
+          <form onSubmit={onSubmit} className="mt-4 space-y-3">
+            <input name="name" placeholder="Nom" className="w-full p-2 rounded bg-black/40 border border-white/10" />
+            <input name="email" placeholder="Email" className="w-full p-2 rounded bg-black/40 border border-white/10" />
+            <textarea name="message" placeholder="Message" className="w-full p-2 rounded bg-black/40 border border-white/10" />
+
+            <button className="bg-gold-500 text-black px-4 py-2 rounded">
+              Envoyer
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+
+    </Section>
+  </main>
+);
+
