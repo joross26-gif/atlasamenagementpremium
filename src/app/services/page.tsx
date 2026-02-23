@@ -10,7 +10,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <main style={{ backgroundImage: "url(/backgrounds/services-bg.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}>
-      <Section title="Services" subtitle="Ce que nous faisons à Montréal Est (été + hiver).">
+      <Section title="Services" subtitle="Ce que nous faisons à Montréal Est ,Repentigny,Charlemagne,Terrebonne,Lachenaie (été + hiver).">
         <div className="grid gap-4 md:grid-cols-2">
           {services.map((s) => (
             <div key={s.title} className="rounded-2xl border border-white/10 bg-black/30 p-6">
