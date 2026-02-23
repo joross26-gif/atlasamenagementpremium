@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: `${SITE.name} — Paysagement & Déneigement`,
-  description: "Paysagement, pavé uni, entretien, déneigement et services à la carte à Montréal Est.",
+  description: "Paysagement, pavé uni, entretien, déneigement et services à la carte à Montréal Est,Repentigny,Charlemagne,Terrebonne,Lachenaie.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
